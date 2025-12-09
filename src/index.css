@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+<<<<<<< ours
+  @apply bg-slate-50 text-slate-900;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.card {
+  @apply bg-white shadow-card rounded-xl p-4 border border-slate-100;
+}
+
+.badge {
+  @apply inline-flex items-center px-2 py-1 rounded-md text-xs font-semibold;
+}
+
+.table-header {
+  @apply text-xs uppercase text-slate-500 font-semibold tracking-wide;
+=======
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #f8fafc;
+>>>>>>> theirs
+}
