@@ -2,25 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-<<<<<<< ours
-  @apply bg-slate-50 text-slate-900;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+/* ===== Base ===== */
+@layer base {
+  :root {
+    --ring: 0 0% 0%;
+  }
+
+  html, body, #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    @apply bg-slate-50 text-slate-900 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /* Seleção de texto mais bonita */
+  ::selection {
+    @apply bg-slate-900 text-white;
+  }
+
+  /* Scrollbar discreta (Chromium) */
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-full hover:bg-slate-400;
+  }
+  *::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
 }
 
-.card {
-  @apply bg-white shadow-card rounded-xl p-4 border border-slate-100;
+/* ===== Components ===== */
+@layer components {
+  .card {
+    /* ⬇️ agora usa a utilidade `shadow-card` que definimos em @layer utilities */
+    @apply bg-white shadow-card rounded-xl p-4 border border-slate-100;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2 py-1 rounded-md text-xs font-semibold;
+  }
+
+  .badge--info   { @apply bg-sky-50  text-sky-700  ring-1 ring-sky-200; }
+  .badge--warn   { @apply bg-amber-50 text-amber-700 ring-1 ring-amber-200; }
+  .badge--ok     { @apply bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200; }
+
+  .table-header {
+    @apply text-xs uppercase text-slate-500 font-semibold tracking-wide;
+  }
+
+  /* Botões base (opcional, caso use) */
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-lg px-3 py-2 font-medium
+           bg-slate-900 text-white hover:bg-slate-800 active:scale-[0.98]
+           transition-colors duration-150;
+  }
+  .btn--ghost {
+    @apply bg-transparent text-slate-700 hover:bg-slate-100;
+  }
 }
 
-.badge {
-  @apply inline-flex items-center px-2 py-1 rounded-md text-xs font-semibold;
-}
+/* ===== Utilities ===== */
+@layer utilities {
+  /* A utilidade que faltava e causava o erro */
+  .shadow-card {
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.08);
+  }
 
-.table-header {
-  @apply text-xs uppercase text-slate-500 font-semibold tracking-wide;
-=======
-  margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: #f8fafc;
->>>>>>> theirs
+  /* Texto equilibrado em títulos (Chrome) */
+  .text-balance {
+    text-wrap: balance;
+  }
 }

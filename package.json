@@ -1,5 +1,4 @@
 {
-<<<<<<< ours
   "name": "nfehub",
   "version": "1.0.0",
   "main": "electron/main.js",
@@ -39,38 +38,5 @@
       "target": ["nsis"],
       "icon": "build/icon.ico"
     }
-=======
-  "name": "nfe-hub",
-  "version": "1.0.0",
-  "description": "Electron + React utility para leitura de XML de NF-e/NFC-e.",
-  "main": "electron/main.cjs",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "start": "npm run build && electron .",
-    "electron": "electron ."
-  },
-  "keywords": [
-    "electron",
-    "react",
-    "nfe",
-    "xml"
-  ],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "electron": "^28.3.3",
-    "fast-xml-parser": "^4.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.4.0",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.14",
-    "vite": "^5.4.10"
->>>>>>> theirs
   }
 }
